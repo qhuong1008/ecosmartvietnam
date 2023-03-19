@@ -1,79 +1,80 @@
-.productItemContainer{
-    display:inline-block;
+.productItemContainer {
+  display: inline-block;
+  width: 200px;
+  margin: 15px 18.7px;
+  // background-color: #8080800f;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  .productImage {
+    display: flex;
+    background-image: url("https://ecosmartvietnam.com/static/img/products/product_page_5.jpg");
     width: 200px;
-    margin:15px 18.7px;
-    background-color: #8080800f;
-    padding:10px;
-    border-radius: 10px;
-    .productImage{
-        display:flex;
-        background-image:url('https://ecosmartvietnam.com/static/img/products/product_page_5.jpg');
-        width:200px;
-        height:200px;
-        background-size: cover; 
+    height: 200px;
+    background-size: cover;
+  }
+  .productHeader {
+    .productAchieve {
+      color: rgb(231, 153, 28);
+      font-size: 45px;
+      rotate: (-45deg);
+      margin-top: -55px;
+      margin-left: 45px;
     }
-    .productHeader{
-        .productAchieve{
-            color:rgb(231, 153, 28);
-            font-size:45px;
-            rotate:(-45deg);
-            margin-top:-55px;
-            margin-left:45px;
-        }
-        .productDiscount{
-            margin-left:50px;
-            width:30px;
-            height:40px;
-            font-size:13px;
-            background-image:radial-gradient(#ff0000, #ff5757);
-            padding:10px;
-            text-align: center;
-            color:white;
-        }
+    .productDiscount {
+      margin-left: 50px;
+      width: 30px;
+      height: 40px;
+      font-size: 13px;
+      background-image: radial-gradient(#ff0000, #ff5757);
+      padding: 10px;
+      text-align: center;
+      color: white;
     }
+  }
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-0.0625rem);
+    box-shadow: 0 0.0625rem 20px 0 rgba(0, 0, 0, 0.05);
+  }
 }
 
-
-
-.productHeader{
-    width:100%;
-    display:flex;
+.productHeader {
+  width: 100%;
+  display: flex;
 }
 
+.productContent {
+  width: 200px;
+  height: 175px;
+  margin-left: 7px;
+  .productContentTitle {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  .productContentPromote {
+    border: 3px solid #406d59;
+    color: #406d59;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .productContentPrice {
+    display: inline-block;
+    color: #406d59;
+    font-size: 25px;
+    padding: 15px 0;
+  }
+  .productRate {
+    margin-bottom: 25px;
+    .productRateStar {
+      color: rgb(211, 211, 33);
+      margin-right: 12px;
+    }
+  }
 
-
-.productContent{
-    width:200px;
-    height:175px;
-    margin-left:7px;
-    .productContentTitle{
-        font-size:16px;
-        margin:5px 0;
-    }
-    .productContentPromote{
-        border:3px solid #406d59;
-        color:#406d59;
-        display:inline-block;
-        padding: 5px 10px; 
-        border-radius:5px;
-    }
-    .productContentPrice{
-        display:inline-block;
-        color:#406d59;
-        font-size:25px;
-        padding: 15px 0;
-    }
-    .productRate{
-        margin-bottom:25px;
-        .productRateStar{
-            color:rgb(211, 211, 33);
-            margin-right:12px;
-        }
-    }
-
-    .productPlace{
-        font-style: italic;
-        color:grey;
-    }
+  .productPlace {
+    font-style: italic;
+    color: grey;
+  }
 }
-

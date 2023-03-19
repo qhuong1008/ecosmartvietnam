@@ -1,3 +1,5 @@
+@import "globalstyle.module.scss";
+
 .navbarContainer {
   display: flex;
   flex-direction: row;
@@ -6,6 +8,7 @@
   padding: 5px 90px;
 }
 .navbarList {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,7 +18,20 @@
     font-weight: 550;
     &:hover {
       cursor: pointer;
+      &::after {
+        display: block;
+      }
     }
+  }
+  .navbarItem::after {
+    position: absolute;
+    display: none;
+    background-color: $primary-color;
+    width: 100%;
+    height: 2px;
+    content: "";
+    border-radius: 999px;
+    margin-top: 10px;
   }
 }
 .logo {

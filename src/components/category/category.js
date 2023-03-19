@@ -1,6 +1,7 @@
 import styles from "../../styles/category.module.scss";
 import {
   faBars,
+  faCaretDown,
   faCaretRight,
   faFilter,
   faList,
@@ -34,6 +35,91 @@ function Category() {
             <FontAwesomeIcon icon={faFilter} />
           </div>
           <label>BỘ LỌC TÌM KIẾM</label>
+        </div>
+        <div className={styles.filterGroup}>
+          <div className={styles.filterGroupLabel}>Theo Danh Mục</div>
+          <div className={styles.filterGroupList}>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Áo thun (+700k)</span>
+            </div>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Áo khoác (+500k)</span>
+            </div>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Áo sơ mi (+600k)</span>
+            </div>
+          </div>
+          <div className={styles.filterMore}>
+            <span>Thêm</span>
+            <FontAwesomeIcon icon={faCaretDown} />
+          </div>
+          <div className={styles.ruler}></div>
+        </div>
+        <div className={styles.filterGroup}>
+          <div className={styles.filterGroupLabel}>Đơn Vị Vận Chuyển</div>
+          <div className={styles.filterGroupList}>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Hỏa tốc</span>
+            </div>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Nhanh</span>
+            </div>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Tiết kiệm</span>
+            </div>
+          </div>
+          <div className={styles.ruler}></div>
+        </div>
+        <div className={styles.filterGroup}>
+          <div className={styles.filterGroupLabel}>Khoảng giá</div>
+          <div className={styles.priceRangeFilter}>
+            <input
+              type="text"
+              placeholder="₫ TỪ"
+              className={styles.priceRangeFilter__input}
+            />
+            -
+            <input
+              type="text"
+              placeholder="₫ ĐẾN"
+              className={styles.priceRangeFilter__input}
+            />
+          </div>
+          <div className={styles.btn}>ÁP DỤNG</div>
+          <div className={styles.ruler}></div>
+        </div>
+
+        <div className={styles.filterGroup}>
+          <div className={styles.filterGroupLabel}>Dịch Vụ & Khuyến Mãi</div>
+          <div className={styles.filterGroupList}>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Freeship Xtra</span>
+            </div>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Hoàn xu Xtra</span>
+            </div>
+            <div className={styles.filterGroupItem}>
+              <input type="checkbox" />
+              <span>Đang giảm giá</span>
+            </div>
+          </div>
+          <div className={styles.filterMore}>
+            <span>Thêm</span>
+            <FontAwesomeIcon icon={faCaretDown} />
+          </div>
+          <div className={styles.ruler}></div>
+        </div>
+        <div className={styles.ruler}></div>
+        <div className={`${styles.btn} ${styles.deleteAllFilterBtn}`}>
+          XÓA TẤT CẢ
         </div>
       </div>
     </div>
