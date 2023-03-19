@@ -41,6 +41,7 @@
   }
 }
 .filterContainer {
+  margin-top: 30px;
   .filterHeader {
     display: flex;
     flex-direction: row;
@@ -49,8 +50,63 @@
       margin-right: 10px;
     }
   }
+  .filterGroup {
+    margin-top: 20px;
+    font-size: 14px;
+    .filterGroupLabel {
+      margin-bottom: 13px;
+    }
+    .filterGroupItem {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: 10px;
+        margin-bottom: 2px;
+      }
+    }
+    .filterMore {
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0 20px 22px;
+      &:hover {
+        cursor: pointer;
+      }
+      span {
+        margin-right: 10px;
+      }
+    }
+    .priceRangeFilter {
+      margin-bottom: 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .priceRangeFilter__input {
+        width: 70px;
+        outline: none;
+        padding: 5px 5px;
+        // margin-right: 10px;
+      }
+    }
+    .submitBtn {
+      padding: 7px 10px;
+      border-radius: 5px;
+      background-color: $primary-color;
+      color: #fff;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
-.sortbarContainer {
-  display: flex;
-  flex-direction: row;
+.deleteAllFilterBtn {
+  padding: 7px 10px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
 }
