@@ -8,6 +8,7 @@
 .navbarList {
   display: flex;
   flex-direction: row;
+  align-items: center;
   .navbarItem {
     margin: 0 15px;
     font-size: 18.4px;
@@ -22,4 +23,27 @@
     width: 75px;
     height: 75px;
   }
+}
+.navbarToggler {
+  border: 1px solid rgb(165, 165, 165);
+  padding: 10px 15px;
+  border-radius: 7px;
+  height: auto;
+  color: gray;
+  display: none;
+  position: absolute;
+  right: 25px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .navbarList {
+    display: none;
+  }
+  .navbarToggler {
+    display: block;
+  }
+}
+@media only screen and (min-width: 991px) {
 }

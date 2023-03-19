@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styles from "../../styles/navbar.module.scss";
-
+import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Navbar() {
   const router = useRouter();
   return (
@@ -28,6 +29,12 @@ function Navbar() {
           <div onClick={() => router.push("/")} className={styles.navbarItem}>
             Liên hệ
           </div>
+          <div className={styles.navbarItem}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </div>
+        </div>
+        <div className={styles.navbarToggler}>
+          <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
     </>
