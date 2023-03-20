@@ -29,8 +29,14 @@ function Navbar() {
           <div onClick={() => router.push("/")} className={styles.navbarItem}>
             Liên hệ
           </div>
-          <div className={styles.navbarItem}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <div className={styles.searchBtn}>
+            <input type="" name="" value="" />
+            <div className={styles.iconContainer}>
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className={styles.icon}
+              />
+            </div>
           </div>
         </div>
         <div className={styles.navbarToggler}>

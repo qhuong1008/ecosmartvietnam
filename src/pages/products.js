@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/navbar";
 import Banner from "@/components/banner/banner";
+import Product from "@/components/product/product";
 import Category from "@/components/category/category";
 import Sortbar from "@/components/sortbar/sortbar";
 import styles from "../styles/product.module.scss";
@@ -14,8 +15,20 @@ function product() {
           <Category />
         </div>
         <div className={styles.right}>
-          <Sortbar />
-          <div className={styles.productListContainer}></div>
+          <div className={styles.productContent}>
+            <Sortbar />
+            <div className={styles.productList}>
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+            </div>
+          </div>
+          <div className={styles.Ads}></div>
         </div>
       </div>
     </>

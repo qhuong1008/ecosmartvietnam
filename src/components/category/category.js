@@ -8,6 +8,7 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { categoryList } from "../../pages/api/categoryApi";
 
 function Category() {
   return (
@@ -19,16 +20,18 @@ function Category() {
         <label>Tất Cả Danh Mục</label>
       </div>
       <div className={styles.ruler}></div>
+
       <div className={styles.categoryList}>
-        <div className={`${styles.categoryItem} ${styles.active}`}>
-          <FontAwesomeIcon icon={faCaretRight} className={styles.icon} />
-          Tinh dầu 1
-        </div>
-        <div className={styles.categoryItem}>Tinh dầu 2</div>
-        <div className={styles.categoryItem}>Tinh dầu 3</div>
-        <div className={styles.categoryItem}>Tinh dầu 4</div>
-        <div className={styles.categoryItem}>Tinh dầu 5</div>
+        {categoryList[0].list.map((item, index) => {
+          return (
+            <div className={`${styles.categoryItem} ${styles.active}`}>
+              <FontAwesomeIcon icon={faCaretRight} className={styles.icon} />
+              {item}
+            </div>
+          );
+        })}
       </div>
+
       <div className={styles.filterContainer}>
         <div className={styles.filterHeader}>
           <div className={styles.icon}>
@@ -39,18 +42,14 @@ function Category() {
         <div className={styles.filterGroup}>
           <div className={styles.filterGroupLabel}>Theo Danh Mục</div>
           <div className={styles.filterGroupList}>
-            <div className={styles.filterGroupItem}>
-              <input type="checkbox" />
-              <span>Áo thun (+700k)</span>
-            </div>
-            <div className={styles.filterGroupItem}>
-              <input type="checkbox" />
-              <span>Áo khoác (+500k)</span>
-            </div>
-            <div className={styles.filterGroupItem}>
-              <input type="checkbox" />
-              <span>Áo sơ mi (+600k)</span>
-            </div>
+            {categoryList.map((cateItem) => {
+              return (
+                <div className={styles.filterGroupItem}>
+                  <input type="checkbox" />
+                  <span>{cateItem.name}</span>
+                </div>
+              );
+            })}
           </div>
           <div className={styles.filterMore}>
             <span>Thêm</span>
