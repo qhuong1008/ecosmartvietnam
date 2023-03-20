@@ -24,7 +24,10 @@ function Category() {
       <div className={styles.categoryList}>
         {categoryList[0].list.map((item, index) => {
           return (
-            <div className={`${styles.categoryItem} ${styles.active}`}>
+            <div
+              className={`${styles.categoryItem} ${styles.active}`}
+              key={index}
+            >
               <FontAwesomeIcon icon={faCaretRight} className={styles.icon} />
               {item}
             </div>
@@ -42,9 +45,9 @@ function Category() {
         <div className={styles.filterGroup}>
           <div className={styles.filterGroupLabel}>Theo Danh Mục</div>
           <div className={styles.filterGroupList}>
-            {categoryList.map((cateItem) => {
+            {categoryList.map((cateItem, index) => {
               return (
-                <div className={styles.filterGroupItem}>
+                <div className={styles.filterGroupItem} key={index}>
                   <input type="checkbox" />
                   <span>{cateItem.name}</span>
                 </div>
