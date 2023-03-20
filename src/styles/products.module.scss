@@ -1,12 +1,13 @@
 .productItemContainer {
   display: inline-block;
+  position: relative;
   width: 200px;
   margin: 15px 18.7px;
-  // background-color: #8080800f;
   background-color: #fff;
   padding: 10px;
   border-radius: 5px;
   .productImage {
+    position: relative;
     display: flex;
     background-image: url("https://ecosmartvietnam.com/static/img/products/product_page_5.jpg");
     width: 200px;
@@ -22,6 +23,8 @@
       margin-left: 45px;
     }
     .productDiscount {
+      position: absolute;
+      right: 18px;
       margin-left: 50px;
       width: 30px;
       height: 40px;
@@ -76,5 +79,25 @@
   .productPlace {
     font-style: italic;
     color: grey;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .productItemContainer {
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    .productImage {
+      width: 70vw;
+      height: 70vw;
+      background-size: cover;
+    }
+    .productAchieve {
+      position: absolute;
+      left: -72px;
+      top: 28px;
+    }
   }
 }

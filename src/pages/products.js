@@ -17,21 +17,20 @@ function product() {
         <div className={styles.right}>
           <div className={styles.productContent}>
             <Sortbar />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            <div className={styles.productList}>
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+            </div>
           </div>
-          <div className={styles.Ads}>
-
-          </div>
+          <div className={styles.Ads}></div>
         </div>
       </div>
-
     </>
   );
 }
