@@ -1,2 +1,12 @@
 $primary-color: #406d59;
 $hover-primary-color: #406d46;
+.btn {
+  padding: 7px 10px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
